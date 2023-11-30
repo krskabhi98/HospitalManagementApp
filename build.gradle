@@ -16,11 +16,19 @@ repositories {
 }
 
 dependencies {
-	implementation 'org.springframework.boot:spring-boot-starter:2.7.17'
-	testImplementation 'org.springframework.boot:spring-boot-starter-test:2.7.17'
-	implementation 'org.springframework.boot:spring-boot-starter-web:2.7.17'
+
+	implementation (group: 'org.springframework.boot', name: 'spring-boot-starter', version: springBootVersion)
+	implementation (group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: springBootVersion)
+	implementation (group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa', version: springBootVersion)
+	implementation (group: 'com.h2database', name: 'h2', version: h2Version)
+	implementation (group: 'org.apache.tomcat', name: 'tomcat-jdbc', version: '9.0.43')
+	implementation (group: 'javax.xml.bind', name: 'jaxb-api', version: jaxbVersion)
+
+	testImplementation (group: 'com.h2database', name: 'h2', version: h2Version)
+	testImplementation (group: 'org.springframework.boot', name: 'spring-boot-starter-test', version: springBootVersion)
+
 }
 
-tasks.named('test') {
-	useJUnitPlatform()
-}
+//tasks.named('test') {
+//	useJUnitPlatform()
+//}
