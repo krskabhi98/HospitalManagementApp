@@ -1,7 +1,6 @@
 package com.hospital.model;
 
-
-import javax.persistence.*;
+import jakarta.persistence.*;
 
 @Entity
 @Table(name = "receptionists")
