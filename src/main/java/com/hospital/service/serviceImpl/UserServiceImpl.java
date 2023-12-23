@@ -6,6 +6,8 @@ import com.hospital.service.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class UserServiceImpl implements IUserService   {
 
@@ -13,7 +15,13 @@ public class UserServiceImpl implements IUserService   {
     private IUserRepository userRepository;
 
     @Override
+    public List<User> getAllUserDetails() {
+        return userRepository.getAllUser();
+    }
+
+    @Override
     public User addNewUser(User newUser) {
-        return userRepository.save(newUser);
+        return userRepository.addNewUser(newUser);
+
     }
 }
