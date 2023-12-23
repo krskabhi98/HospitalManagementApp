@@ -23,6 +23,8 @@ dependencies {
 	implementation (group: 'com.h2database', name: 'h2', version: h2Version)
 	implementation (group: 'org.apache.tomcat', name: 'tomcat-jdbc', version: '9.0.43')
 	implementation (group: 'javax.xml.bind', name: 'jaxb-api', version: jaxbVersion)
+	implementation (group: 'com.mchange', name: 'c3p0', version: '0.9.5.5')
+
 
 	testImplementation (group: 'com.h2database', name: 'h2', version: h2Version)
 	testImplementation (group: 'org.springframework.boot', name: 'spring-boot-starter-test', version: springBootVersion)
