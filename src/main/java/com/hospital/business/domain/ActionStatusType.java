@@ -6,6 +6,7 @@ import java.util.Map;
 
 public enum ActionStatusType {
     SUCCESS(0L, 0L),
+    FATAL(99L,1L),
     INVALID_INPUT_RECEIVED(25L,25L);
 
 

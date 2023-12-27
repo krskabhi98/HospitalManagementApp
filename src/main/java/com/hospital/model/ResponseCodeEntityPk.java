@@ -10,7 +10,7 @@ public class ResponseCodeEntityPk implements Serializable {
 
     private static final long serialVersionUID=1l;
 
-    @Column(name = "Maj_CDE", columnDefinition = "NUMBER(5)")
+    @Column(name = "MAJ_CDE", columnDefinition = "NUMBER(5)")
     private Long majorCode;
 
     @Column(name = "MNR_CDE", columnDefinition = "NUMBER(5)")

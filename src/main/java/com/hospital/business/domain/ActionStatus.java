@@ -14,6 +14,9 @@ public class ActionStatus implements Serializable {
     public static final String SUCCESSFUL_STATUS_MESSAGE="Operation completed successfully";
 
     private static final long serialVersionUID=1L;
+    private static final Long UNABLE_TO_RETRIVE_STATUS_MAJOR_CODE = 302L;
+    private static final Long UNABLE_TO_RETRIVE_STATUS_MINOR_CODE = 1L;
+    private static final String UNABLE_TO_RETRIVE_STATUS_ERROR_MESSAGE = "Data access error -  Unable to retrive error definition";
 
     @Min(0)
     @Max(99999)
@@ -38,6 +41,15 @@ public class ActionStatus implements Serializable {
         result.setMessage(SUCCESSFUL_STATUS_MESSAGE);
         result.setLevel(StatusCodeLevel.SUCCESS.getCode());
 
+        return result;
+    }
+
+    public static final ActionStatus unableToRetriveActionStatus(){
+        ActionStatus result=new ActionStatus();
+        result.setMajor(UNABLE_TO_RETRIVE_STATUS_MAJOR_CODE);
+        result.setMinor(UNABLE_TO_RETRIVE_STATUS_MINOR_CODE);
+        result.setMessage(UNABLE_TO_RETRIVE_STATUS_ERROR_MESSAGE);
+        result.setLevel(StatusCodeLevel.FATAL.getCode());
         return result;
     }
 

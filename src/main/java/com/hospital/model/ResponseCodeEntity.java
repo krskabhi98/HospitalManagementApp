@@ -8,13 +8,13 @@ import java.io.Serializable;
 
 
 @Entity(name = "ResponseCode")
-@Table(name = "DSTR_RSPNS_TYP")
-//@Cacheable
+@Table(name = "RSPNS_TYP")
+@Cacheable
 public class ResponseCodeEntity implements Serializable {
     private static final long serialVersionUID=1L;
 
     @EmbeddedId
-    @AttributeOverrides({@AttributeOverride(column = @Column(name = "Maj_CDE"), name="key.majorCode"),
+    @AttributeOverrides({@AttributeOverride(column = @Column(name = "MAJ_CDE"), name="key.majorCode"),
                         @AttributeOverride(column = @Column(name="MNR_CDE"), name="key.minorCode")})
     private ResponseCodeEntityPk key;
 

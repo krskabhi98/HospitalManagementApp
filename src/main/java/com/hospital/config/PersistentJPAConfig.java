@@ -101,6 +101,7 @@ public class PersistentJPAConfig {
         importFileList.add("static_data/RECEPTIONISTS.sql");
         importFileList.add("static_data/USERS.sql");
         importFileList.add("static_data/APPOINTMENTS.sql");
+        importFileList.add("static_data/RSPNS_TYP.sql");
 
         setImportFileProperty(importFileList,properties);
 

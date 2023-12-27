@@ -1,0 +1,2 @@
+INSERT INTO RSPNS_TYP(MAJ_CDE , MNR_CDE, RSPNS_LVL_VAL, RSPNS_MSG_TXT) VALUES('0','0','S','Operation completed successfully.');
+INSERT INTO RSPNS_TYP(MAJ_CDE , MNR_CDE, RSPNS_LVL_VAL, RSPNS_MSG_TXT) VALUES('99','1','E','fatal Error - Unable to execute operation.');

@@ -10,12 +10,19 @@ import org.springframework.stereotype.Service;
 public class ActionStatusManager implements IActionStatusNanager{
 
     @Autowired
-    private IHospitalManagementRepository hospitalmanagementRepository;
+    private IHospitalManagementRepository hospitalManagementRepository;
 
 
     @Override
-    public ActionStatus getActionStatus(ActionStatusType actionStatusType) {
-        return null;
+    public ActionStatus getActionStatus(Long majorCode, Long minorCode) {
+
+        ActionStatus actionStatus=hospitalManagementRepository.getResponseCodeByMajorMinor(majorCode,minorCode);
+
+        if(null !=actionStatus){
+            return actionStatus;
+        }
+
+        return ActionStatus.unableToRetriveActionStatus();
     }
 
     @Override

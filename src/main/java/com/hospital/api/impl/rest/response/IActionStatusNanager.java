@@ -5,7 +5,7 @@ import com.hospital.business.domain.ActionStatusType;
 
 public interface IActionStatusNanager {
 
-    ActionStatus getActionStatus(ActionStatusType actionStatusType);
+    ActionStatus getActionStatus(Long majorCode, Long minorCode);
 
     Exception getReportableException(ActionStatusType actionStatusType);
 }

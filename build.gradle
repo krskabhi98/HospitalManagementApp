@@ -16,6 +16,8 @@ repositories {
 }
 
 dependencies {
+	compileOnly "org.mapstruct:mapstruct:1.4.2.Final"
+	annotationProcessor "org.mapstruct:mapstruct-processor:1.4.2.Final"
 
 	implementation (group: 'org.springframework.boot', name: 'spring-boot-starter', version: springBootVersion)
 	implementation (group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: springBootVersion)
@@ -25,13 +27,12 @@ dependencies {
 	implementation (group: 'javax.xml.bind', name: 'jaxb-api', version: jaxbVersion)
 	implementation (group: 'com.mchange', name: 'c3p0', version: '0.9.5.5')
 	implementation group: 'io.springfox', name: 'springfox-swagger-ui', version: '2.0.2'
-	// https://mvnrepository.com/artifact/org.webjars/swagger-ui
 	implementation (group: 'org.webjars', name: 'swagger-ui', version: '5.9.0')
 	implementation ('io.springfox:springfox-boot-starter:3.0.0')
-	// https://mvnrepository.com/artifact/jakarta.validation/jakarta.validation-api
 	implementation (group: 'jakarta.validation', name: 'jakarta.validation-api', version: '3.0.2')
-	// https://mvnrepository.com/artifact/org.apache.commons/commons-lang3
-	implementation group: 'org.apache.commons', name: 'commons-lang3', version: '3.0'
+	implementation (group: 'org.apache.commons', name: 'commons-lang3', version: '3.0')
+	implementation (group: 'org.mapstruct', name: 'mapstruct-processor', version: '1.4.2.Final')
+	implementation (group: 'org.mapstruct', name: 'mapstruct', version: '1.4.2.Final')
 
 
 

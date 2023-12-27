@@ -80,7 +80,7 @@ public class UserController {
 
     private List<Status> buildResponseList(ActionStatusType actionStatusType) {
         List<Status> responseStatus =new ArrayList<>(10);
-        ActionStatus actionStatus=actionStatusNanager.getActionStatus(actionStatusType);
+        ActionStatus actionStatus=actionStatusNanager.getActionStatus(actionStatusType.getMajor(),actionStatusType.getMinor());
         responseStatus.add(new Status(actionStatus.getMajor().toString(), actionStatus.getMinor().toString(),
                 actionStatus.getLevel().toString(), actionStatus.getMessage()));
         return responseStatus;
